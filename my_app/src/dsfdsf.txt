@@ -1,0 +1,6 @@
+#include <iostream>  #include <algorithm>  using namespace std;  
+int main() { 
+    int n,k,m; 
+    cin>>n;  
+    int a[n]; 
+    for(int i=0;i<n;i++) {   cin>>a[i];   }   cin>>k>>m;      sort(a,a+n,greater<int>());     int ctr=0;   while(a[0]>k) {   a[0]=a[0]-m;   if(a[0]<k) {   a[0]=k;   }   ctr++;   sort(a,a+n,greater<int>());   }   cout<<ctr<<endl;   return 0;  }
